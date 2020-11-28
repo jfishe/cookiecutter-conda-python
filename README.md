@@ -10,6 +10,7 @@ conda packages using Python
  - Coverage report hosted on Codecov.io (activated after first successful CI run, which uploads results)
  - Code analysis with codacy, setup to exclude versioneer and tests (requires activation of project at Codacy)
  - setup.cfg with flake8 opinions and pytest/pytest-cov configuration (including fixed PYTHONHASHSEED)
+ - Use src/package_name for test import isolation.
 
 ## Installation
 
@@ -19,7 +20,7 @@ Prior to installing cookiecutter-conda-python, the cookiecutter package must be 
 
 With cookiecutter installed, the cookiecutter-conda-python template can be installed with::
 
-    $ cookiecutter https://github.com/conda/cookiecutter-conda-python.git
+    $ cookiecutter https://github.com/jfishe/cookiecutter-conda-python.git
 
 Once cookiecutter clones the template, you will be asked a series of questions related to your project::
 
@@ -51,3 +52,9 @@ You'll still need to activate the web services you want to use - they won't be a
  - __Travis CI__: https://docs.travis-ci.com/user/getting-started/#To-get-started-with-Travis-CI
  - __Codecov__: No configuration necessary - project will be created when first successful CI run completes and uploads coverage results
  - __Codacy__: https://support.codacy.com/hc/en-us/articles/207278449-Getting-started-with-Codacy
+
+ ## Contributions
+
+- Thanks to [Continuum Analytics, Inc.](mailto:conda@continuum.io) for the
+  original template
+  [conda/cookiecutter-conda-package](https://github.com/conda/cookiecutter-conda-package).
