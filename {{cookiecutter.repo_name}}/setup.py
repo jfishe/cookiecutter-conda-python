@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 import versioneer
 
 requirements = [
@@ -14,7 +14,9 @@ setup(
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
-    packages=['{{ cookiecutter.package_name }}'],
+    # packages=['{{ cookiecutter.package_name }}'],
+    packages=find_packages(where='src'),
+    package_dir={'': 'src'},
     {% if cookiecutter.include_cli == "y" -%}
     entry_points={
         'console_scripts': [
@@ -28,5 +30,6 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
     ]
 )

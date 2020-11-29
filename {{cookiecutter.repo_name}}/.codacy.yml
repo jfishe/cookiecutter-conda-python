@@ -1,6 +1,6 @@
 ---
 exclude_paths:
-  - '{{cookiecutter.package_name}}/_version.py'
+  - 'src/{{cookiecutter.package_name}}/_version.py'
   - 'tests/**/*'
   - 'tests/*'
   - 'benchmarks/**/*'
